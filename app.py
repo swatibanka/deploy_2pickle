@@ -13,7 +13,7 @@ app = Flask(__name__)
 def Home():
     return jsonify("Hello World")
 
-@app.route("/predict", methods = ["GET"])
+@app.route("/predict", methods = ["GET","POST"])
 def predict():
 
     x_future_date = pd.date_range(start ="2022-08-01", end = "2023-01-31")
